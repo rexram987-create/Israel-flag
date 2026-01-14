@@ -3,224 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>דגל ישראל: האנטומיה של הריבונות</title>
+    <title>דגל ישראל: שער לריבונות</title>
     <style>
         :root {
-            /* הגדרת משתנים למצב כהה */
-            --primary-color: #4a90e2; /* תכלת בהיר יותר שיתאים לרקע כהה */
+            --primary-color: #4a90e2;
             --bg-color: #121212;
             --card-bg: #1e1e1e;
             --text-color: #e0e0e0;
             --border-color: #333;
+            --nav-bg: #001f5b;
         }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text-color); max-width: 900px; margin: 0 auto; padding: 20px; background-color: var(--bg-color); }
+        
+        /* סרגל ניווט */
+        .navbar { background-color: var(--nav-bg); overflow: hidden; border-radius: 8px; margin-bottom: 20px; }
+        .navbar a { float: right; display: block; color: #f2f2f2; text-align: center; padding: 14px 20px; text-decoration: none; transition: 0.3s; }
+        .navbar a:hover { background-color: #ddd; color: black; }
+        .navbar a.active { background-color: var(--primary-color); color: white; }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: var(--bg-color);
-        }
-
-        header {
-            background: linear-gradient(135deg, #001f5b, #0038B8); /* גרדיאנט כחול כהה */
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-            border-radius: 12px;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        }
-
-        header h1 {
-            margin: 0 0 10px 0;
-            font-size: 2.5rem;
-        }
-
-        section {
-            background: var(--card-bg);
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            border: 1px solid var(--border-color);
-        }
-
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 12px;
-            margin-top: 0;
-        }
-
-        /* עיצוב מיוחד לתמונות */
-        .flag-image {
-            width: 100%;
-            max-width: 700px;
-            height: auto;
-            display: block;
-            margin: 30px auto;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-            border: 3px solid #333;
-        }
-
-        /* כיתוב לתמונות */
-        .img-caption {
-            text-align: center;
-            font-size: 0.9rem;
-            color: #aaa;
-            margin-top: -20px;
-            margin-bottom: 30px;
-            font-style: italic;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 25px 0;
-            background: #252525;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        th, td {
-            border: 1px solid var(--border-color);
-            padding: 15px;
-            text-align: right;
-        }
-
-        th {
-            background-color: #333;
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-
-        /* גלריה של שתי תמונות זו לצד זו */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin: 30px 0;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-        }
-
-        footer {
-            text-align: center;
-            font-size: 0.9rem;
-            color: #888;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-        }
-
-        /* התאמה למובייל */
-        @media (max-width: 600px) {
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        header { background: linear-gradient(135deg, #001f5b, #0038B8); color: white; padding: 3rem 2rem; text-align: center; border-radius: 12px; margin-bottom: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        header h1 { margin: 0 0 10px 0; font-size: 2.5rem; }
+        section { background: var(--card-bg); padding: 25px; margin-bottom: 25px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); border: 1px solid var(--border-color); }
+        h2 { color: var(--primary-color); border-bottom: 2px solid var(--primary-color); padding-bottom: 12px; margin-top: 0; }
+        .flag-image { width: 100%; max-width: 700px; height: auto; display: block; margin: 30px auto; border-radius: 10px; box-shadow: 0 8px 16px rgba(0,0,0,0.4); border: 3px solid #333; }
+        .img-caption { text-align: center; font-size: 0.9rem; color: #aaa; margin-top: -20px; margin-bottom: 30px; font-style: italic; }
+        footer { text-align: center; font-size: 0.9rem; color: #888; margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--border-color); }
     </style>
 </head>
 <body>
 
+<div class="navbar">
+    <a href="index.html" class="active">דף הבית</a>
+    <a href="history.html">היסטוריה והתפתחות</a>
+</div>
+
 <header>
     <h1>דגל מדינת ישראל</h1>
-    <p>ניתוח וקסילולוגי, היסטורי ומשפטי מקיף</p>
+    <p>הסמל המאחד של הריבונות היהודית המתחדשת</p>
 </header>
 
 <section id="intro">
-    <h2>מבוא: האנטומיה של הריבונות</h2>
+    <h2>מבוא: יותר מדגל</h2>
     <p>
-        דגל מדינת ישראל אינו רק בחירה אסתטית, אלא נרטיב המקפל בתוכו את הדילמות הקיומיות של העם היהודי בעת החדשה. הוא מהווה סינתזה בין מסורת דתית עתיקה (הטלית) לבין לאומיות מודרנית חילונית.
+        דגל ישראל הוא תמצית הסיפור הציוני: שילוב עדין בין מסורת עתיקת יומין לבין שאיפה מודרנית לעצמאות. שני פסי התכלת ומגן הדוד במרכזם הפכו לאייקון המזוהה ביותר עם מדינת ישראל והעם היהודי ברחבי העולם.
     </p>
     <img src="https://i.postimg.cc/21RhsMvN/Flag-of-Israel-(bordered)-svg.png" alt="דגל ישראל הרשמי" class="flag-image">
-    <p class="img-caption">דגל ישראל הרשמי: יחס 8:11, תכלת כהה על רקע לבן.</p>
-</section>
-
-<section id="herzl">
-    <h2>חזונו של הרצל: דגל שבעת הכוכבים</h2>
-    <p>
-        בנימין זאב הרצל, חוזה המדינה, לא דמיין את הדגל שאנו מכירים היום. בספרו "מדינת היהודים" (1896), הוא שרטט חזון לדגל חילוני-סוציאליסטי:
+    <p class="img-caption">דגל ישראל הרשמי: עוצב בהשראת הטלית, נקבע בחוק ב-1948.</p>
+    <p style="text-align: center;">
+        רוצים לצלול לעומק? לגלות את הקשר לטלית, את דגל שבעת הכוכבים של הרצל ואת ההצעות שנדחו?<br>
+        <strong><a href="history.html" style="color: var(--primary-color);">עברו לדף ההיסטוריה וההתפתחות >></a></strong>
     </p>
-    <ul>
-        <li><strong>רקע לבן:</strong> לציון החיים החדשים והטהורים בארץ.</li>
-        <li><strong>שבעה כוכבי זהב:</strong> סמל ל-<strong>7 שעות העבודה היומיות</strong>, כחלק מחזון חברתי מתקדם.</li>
-    </ul>
-    <img src="https://i.postimg.cc/rDXxB34Z/1768401397546.png" alt="שחזור דגל שבעת הכוכבים של הרצל" class="flag-image" style="max-width: 500px;">
-    <p class="img-caption">שחזור היסטורי: הצעת הרצל לדגל לבן עם שבעה כוכבי זהב.</p>
 </section>
 
-<section id="rejected">
-    <h2>הדילמה של 1948: ההצעות שנדחו</h2>
+<section id="moment">
+    <h2>רגע מכונן: דגל הדיו באילת</h2>
     <p>
-        עם הקמת המדינה, שר החוץ משה שרת חשש מבעיית "הנאמנות הכפולה" של יהודי התפוצות אם דגל המדינה יהיה זהה לדגל הציוני. ועדת הסמל והדגל בחנה חלופות דרמטיות.
+        למרות הדיונים הרשמיים, את קדושתו קיבל הדגל בשטח. הרגע האיקוני ביותר הוא סיום מלחמת העצמאות (מרץ 1949), כאשר חיילי חטיבת הנגב הגיעו לאום רשרש (אילת). בהיעדר דגל תקני, הם אילתרו דגל מסדין לבן ודיו, והניפו אותו על תורן רעוע. רגע זה נצרב בתודעה כסמל לניצחון הרוח ולקביעת עובדות בשטח.
     </p>
-
-    <h3>1. הצעת אוטה וליש (הפסים האנכיים)</h3>
-    <p>הגרפיקאי אוטה וליש הציע לשנות את כיוון הפסים לאנכי (בדומה לדגלי אירופה) כדי לנתק את הזיקה הישירה לטלית וליצור מראה ממלכתי יותר.</p>
-
-    <h3>2. הצעת מרדכי נמצא-בי (מודל הקנטון)</h3>
-    <p>הוקסילולוג מרדכי נמצא-בי הציע לשלב את הדגל הציוני רק בפינה (הקנטון), בדומה לדגל אוסטרליה, כדי ליצור הבחנה בין דגל המדינה לדגל העם היהודי.</p>
-
-    <div class="gallery-grid">
-        <div class="gallery-item">
-            <img src="https://i.postimg.cc/nXbBygmd/1768401391020.png" alt="הצעת אוטה וליש - פסים אנכיים">
-            <p class="img-caption">הצעת אוטה וליש: פסים אנכיים.</p>
-        </div>
-        <div class="gallery-item">
-            <img src="https://i.postimg.cc/YvKY5ZFn/1768401385660.png" alt="הצעת מרדכי נמצא-בי - קנטון">
-            <p class="img-caption">הצעת נמצא-בי: הדגל בקנטון.</p>
-        </div>
-    </div>
-</section>
-
-<section id="technical">
-    <h2>מפרט טכני רשמי (חוק תש"ט-1949)</h2>
-    <p>הדגל נקבע רשמית בחוק ב-28 באוקטובר 1948. המפרט הטכני שלו מדויק וייחודי.</p>
-    <table>
-        <tr>
-            <th>פרמטר</th>
-            <th>ערך תקני</th>
-            <th>הערות</th>
-        </tr>
-        <tr>
-            <td>יחס אורך/רוחב</td>
-            <td>8:11</td>
-            <td>יחס ייחודי לישראל, המעניק מראה מוארך.</td>
-        </tr>
-        <tr>
-            <td>צבע הפסים</td>
-            <td>תכלת כהה (#0038B8)</td>
-            <td>נבחר לעמידות בשמש הישראלית ולקונטרסט בים.</td>
-        </tr>
-        <tr>
-            <td>רוחב הפסים</td>
-            <td>25 ס"מ</td>
-            <td>עבור דגל תקני ברוחב 160 ס"מ.</td>
-        </tr>
-    </table>
-</section>
-
-<section id="history">
-    <h2>רגעים מכוננים: דגל הדיו</h2>
-    <p>
-        יותר מכל החלטה רשמית, הדגל קיבל את מעמדו בשטח. הרגע המפורסם ביותר הוא הנפת "דגל הדיו" המאולתר בסיום מבצע עובדה (מרץ 1949) באום רשרש (אילת), שסימלה את קביעת הגבול הדרומי.
-    </p>
-    <img src="https://i.postimg.cc/3k5msVGb/1768401380780.png" alt="הנפת דגל הדיו באילת" class="flag-image" style="max-width: 450px;">
-    <p class="img-caption">היסטוריה בהתהוות: חיילי חטיבת הנגב מניפים את דגל הדיו, 1949.</p>
+    <img src="https://i.postimg.cc/3k5msVGb/1768401380780.png" alt="הנפת דגל הדיו באילת" class="flag-image" style="max-width: 500px;">
+    <p class="img-caption">הנפת דגל הדיו, 1949: סמל לתושייה ולקביעת הריבונות בנגב.</p>
 </section>
 
 <footer>
     <p>מבוסס על מחקר מעמיק מאת רם | כל הזכויות שמורות © 2026</p>
-    <p>מקורות: פרוטוקול מועצת המדינה הזמנית (1948), חוק הדגל והסמל (1949), ארכיון צה"ל.</p>
 </footer>
 
 </body>
